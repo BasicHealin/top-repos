@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Repos from './component/Repos';
 import Login from './component/Login';
+import './index.css';
 
 class App extends Component {
   constructor(props) {

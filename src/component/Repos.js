@@ -12,7 +12,7 @@ class Repos extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch('https://api.github.com/search/repositories?l=&o=desc&q=stars%3A>1&s=stars&p=2&ref=advsearch')
+    fetch('https://api.github.com/search/repositories?l=&o=desc&q=stars%3A>1&s=stars')
         .then(response => response.json())
         .then(data => this.setState({ items: data.items, isLoading: false }))
         .catch(error => this.setState({ error, isLoading: false }));
