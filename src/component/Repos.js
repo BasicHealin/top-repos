@@ -5,6 +5,8 @@ class Repos extends Component {
     super(props);
     this.state = {
       items: [],
+      isLoading: false,
+      error: null,
     };
   }
 
@@ -15,6 +17,7 @@ class Repos extends Component {
         .then(data => this.setState({ items: data.items, isLoading: false }))
         .catch(error => this.setState({ error, isLoading: false }));
   }
+
   render() {
     const { items, isLoading, error } = this.state;
 

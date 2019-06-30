@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-    };
-  }
-
-  componentDidMount() {
-
-  }
   handleSubmit = (event) => { 
       event.preventDefault()
       const username = event.target[0].value;
@@ -19,6 +9,7 @@ class Login extends Component {
         this.props.setUser()
     }
   }
+
   render() {
     return (
       <div>
